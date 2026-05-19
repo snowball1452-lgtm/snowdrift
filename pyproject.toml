@@ -1,7 +1,8 @@
 [project]
-name = "repl-nix-workspace"
-version = "0.1.0"
-description = "Add your description here"
+name = "snowdrift"
+version = "1.0.0"
+description = "SnowDrift — Autonomous mobile accessibility agent. MPL-2.0 licensed."
+license = "MPL-2.0"
 requires-python = ">=3.12"
 dependencies = []
 
