@@ -1,0 +1,28 @@
+{
+  "blocks": [
+    {
+      "label": "Morning Deep Work",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "start": "09:00",
+      "end": "12:00"
+    },
+    {
+      "label": "Afternoon Focus",
+      "days": [
+        "Mon",
+        "Wed",
+        "Fri"
+      ],
+      "start": "14:00",
+      "end": "16:00"
+    }
+  ],
+  "min_notice_hours": 24,
+  "max_meetings_per_day": 3
+}

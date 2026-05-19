@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.chaquo.python'
+
+android {
+    namespace 'com.moltbot'
+    compileSdk 34
+
+    signingConfigs {
+        release {
+            storeFile file(project.findProperty("STORE_FILE") ?: "../moltbot.keystore")
+            storePassword project.findProperty("STORE_PASSWORD") ?: "moltbot_release"
+            keyAlias     project.findProperty("KEY_ALIAS")      ?: "moltbot"
+            keyPassword  project.findProperty("KEY_PASSWORD")   ?: "moltbot_release"
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.moltbot"
+        minSdk 26
+        targetSdk 34
+        versionCode 2
+        versionName "2.0.0"
+
+        def backendUrl = project.findProperty("BACKEND_URL") ?: "http://127.0.0.1:8001"
+        buildConfigField "String", "BACKEND_URL", "\"${backendUrl}\""
+
+        ndk {
+            abiFilters "arm64-v8a", "x86_64"
+        }
+
+        python {
+            buildPython "C:/Users/snowb/AppData/Local/Programs/Python/Python310/python.exe"
+            version "3.10"
+            pip {
+                // 0.111.0 added fastapi-cli → orjson (Rust wheel, no ARM64 build)
+                // 0.110.3 is the last clean version — same API, no Rust deps
+                install "fastapi==0.110.3"
+                // uvicorn[standard] pulls uvloop which hard-fails on the Windows build host
+                // Use plain uvicorn + websockets — same runtime capability on Android
+                install "uvicorn==0.29.0"
+                install "websockets==12.0"
+                install "httpx==0.27.0"
+                install "python-dotenv==1.0.1"
+                install "pyyaml==6.0.1"
+                // pydantic v2 requires pydantic-core (Rust/maturin — no ARM64 wheel available)
+                // v1 is pure Python, identical BaseModel/Field API used throughout the codebase
+                install "pydantic==1.10.21"
+                // blake3 has no ARM wheel — using stdlib shim at blake3.py
+                install "psutil==5.9.8"
+                install "motor==3.3.2"
+                install "pymongo==4.6.3"
+                // emergentintegrations: private pkg — stub at emergentintegrations/
+                install "python-multipart==0.0.9"
+            }
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'arm64-v8a', 'x86_64'
+            universalApk true
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+}

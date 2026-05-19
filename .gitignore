@@ -1,0 +1,102 @@
+# ── Security (NEVER commit these) ──
+*.keystore
+*.jks
+local.properties
+*.properties
+!gradle.properties
+!gradle-wrapper.properties
+
+# ── Environment & Secrets ──
+.env
+.env.*
+*.token.json
+*.credentials.json
+.gitconfig
+
+# ── User Data (runtime only) ──
+*.jsonl
+backend/.calendar_cleric/
+backend/.deal_doula/
+backend/.dm_deflector/
+backend/.fridge_forensics/
+backend/.ghidra_analyzer/
+backend/.gym_ghost/
+backend/.hobby/
+backend/.problem_reverser/
+backend/.reasoning_cognitive/
+backend/.reasoning_intent/
+backend/.reasoning_temporal/
+backend/.reference_bible/
+backend/.reference_dictionary/
+backend/.reference_thesaurus/
+backend/.sovereign_memory/
+backend/.stewardship/
+backend/.tab_taxidermist/
+backend/.text_triage/
+!backend/**/.gitkeep
+
+# ── Build Artifacts & Caches ──
+frontend/.metro-cache/
+.metro-cache/
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# ── Android Build ──
+android/.gradle/
+android/app/build/
+android/build/
+
+# ── IDE ──
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Replit artifacts ──
+attached_assets/
+.replit
+replit.nix
+replit.md
+
+# ── Misc ──
+dump.rdb
+*.patch
+snapshots/
+coverage/
+.next/
+out/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+chainlit.md
+.chainlit
+.ipynb_checkpoints
+.vercel
+*.zip
+*.tar.gz
+*.tar
+*.tgz
+*.pack
+*.deb
+*.dylib
+credentials.json
+*.pem
+*.key
+.credentials
+.cache/
+android-sdk/
+venv/
+.venv/
+.ac/

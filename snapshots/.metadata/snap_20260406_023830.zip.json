@@ -1,0 +1,15 @@
+{
+  "key": "snap_20260406_023830.zip",
+  "path": "/app/snapshots/snap_20260406_023830.zip",
+  "size_bytes": 1292985,
+  "size_mb": 1.23,
+  "stored_at": "2026-04-06T02:38:31.453031",
+  "backend": "local",
+  "base_path": "/app/snapshots",
+  "metadata": {
+    "name": "initial_checkpoint",
+    "description": "First clean state snapshot",
+    "created_at": "2026-04-06T02:38:31.452245",
+    "health_score": 100
+  }
+}

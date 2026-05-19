@@ -1,0 +1,12 @@
+# local.properties.template
+# Copy this to local.properties and fill in your values.
+# NEVER commit local.properties — it contains signing credentials.
+#
+# Android SDK path (set by Android Studio automatically):
+sdk.dir=/Users/YOUR_USER/Library/Android/sdk
+
+# Keystore signing config for release builds:
+MYAPP_UPLOAD_STORE_FILE=snowballclaw.keystore
+MYAPP_UPLOAD_STORE_PASSWORD=YOUR_KEYSTORE_PASSWORD
+MYAPP_UPLOAD_KEY_ALIAS=snowballclaw
+MYAPP_UPLOAD_KEY_PASSWORD=YOUR_KEY_PASSWORD

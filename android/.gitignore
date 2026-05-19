@@ -1,0 +1,22 @@
+# Build outputs
+app/build/
+build/
+.gradle/
+local.properties
+
+# Keystores (sensitive — never commit)
+*.keystore
+*.jks
+
+# Python cache
+**/__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# Gradle caches
+gradle/caches/
