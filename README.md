@@ -188,13 +188,6 @@ The Python daemon runs at `http://127.0.0.1:8001/api/`
 
 ---
 
-## SnowballClaw
-
-Same codebase, different skin. Built for distribution to friends and family.  
-`applicationId = com.snowballclaw` — identical Python brain, separate signing key, renamed UI strings.
-
----
-
 ## Why It Works Offline
 
 Chaquopy embeds a full CPython 3.10 interpreter as compiled `.so` libraries inside the APK. There's no subprocess call — the Python daemon runs in a dedicated thread via `uvicorn.Server(config).serve()` on its own asyncio event loop. The Kotlin side communicates via localhost HTTP. No JNI marshaling overhead, no IPC, just regular HTTP on loopback.
