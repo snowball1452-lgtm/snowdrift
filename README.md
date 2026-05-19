@@ -198,4 +198,4 @@ When Ollama is running on the same WiFi network (or via USB tethering), inferenc
 
 ## License
 
-MIT
+MPL-2.0
