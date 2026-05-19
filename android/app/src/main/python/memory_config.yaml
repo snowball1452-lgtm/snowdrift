@@ -1,0 +1,47 @@
+# memory_config.yaml
+# Central configuration for the entire memory stack
+
+version: "1.0.0"
+
+sovereign_memory:
+  store_path: ".sovereign_memory"
+  default_sigma: 0.5
+  embedding_dimensions: 64
+  max_memories_per_session: 10000
+
+secure_chain:
+  curve: "secp256k1"
+  hash_function: "blake3"
+  max_chain_length: 1000000
+  auto_verify: true
+
+synaptic_architecture:
+  theta_phase_initial: 0.0
+  gamma_amplitude_initial: 1.0
+  learning_rate: 0.1
+  meta_cognition_enabled: true
+  neural_productions:
+    - explore_novel
+    - exploit_known
+    - creative_leap
+
+self_healing:
+  enabled: true
+  check_interval_seconds: 60
+  auto_recover: false
+  health_threshold: 40
+  max_snapshots: 10
+  storage_type: "local"
+  storage_path: "/app/snapshots"
+
+swarm:
+  max_subtasks: 5
+  parallel_execution: true
+  consensus_council_enabled: true
+  reviewers_count: 2
+  min_confidence: 0.7
+
+memory_bridge:
+  cache_size: 1000
+  verify_on_read: true
+  auto_sync: true

@@ -1,0 +1,11 @@
+## Copy this file to local.properties and fill in your values.
+## local.properties is gitignored — never commit it.
+
+sdk.dir=C:/Users/YOUR_USERNAME/AppData/Local/Android/Sdk
+BACKEND_URL=http://127.0.0.1:8001
+
+# Keystore (generate with: keytool -genkey -v -keystore snowdrift.keystore ...)
+STORE_FILE=../snowdrift.keystore
+STORE_PASSWORD=your_keystore_password
+KEY_ALIAS=snowdrift
+KEY_PASSWORD=your_key_password

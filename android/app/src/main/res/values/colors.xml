@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF6B35</color>
+    <color name="primary_dark">#E55A25</color>
+    <color name="accent">#FF6B35</color>
+    <color name="background">#0F0F0F</color>
+    <color name="surface">#1A1A1A</color>
+    <color name="on_background">#FFFFFF</color>
+    <color name="on_surface">#E0E0E0</color>
+    <color name="user_bubble">#FF6B35</color>
+    <color name="assistant_bubble">#1A1A1A</color>
+</resources>

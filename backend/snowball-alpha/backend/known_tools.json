@@ -1,0 +1,128 @@
+[
+  {
+    "name": "shell",
+    "command": "bash",
+    "description": "Execute shell commands",
+    "category": "system"
+  },
+  {
+    "name": "python",
+    "command": "python3",
+    "description": "Run Python code",
+    "category": "code"
+  },
+  {
+    "name": "curl",
+    "command": "curl",
+    "description": "Make HTTP requests",
+    "category": "network"
+  },
+  {
+    "name": "find_file",
+    "command": "find",
+    "description": "Search for files",
+    "category": "filesystem"
+  },
+  {
+    "name": "read_file",
+    "command": "cat",
+    "description": "Read file contents",
+    "category": "filesystem"
+  },
+  {
+    "name": "list_dir",
+    "command": "ls",
+    "description": "List directory contents",
+    "category": "filesystem"
+  },
+  {
+    "name": "grep",
+    "command": "grep",
+    "description": "Search text patterns",
+    "category": "text"
+  },
+  {
+    "name": "pip",
+    "command": "pip3",
+    "description": "Python package manager",
+    "category": "package"
+  },
+  {
+    "name": "jq",
+    "command": "jq",
+    "description": "JSON processor",
+    "category": "discovered"
+  },
+  {
+    "name": "git",
+    "command": "git",
+    "description": "Version control",
+    "category": "discovered"
+  },
+  {
+    "name": "node",
+    "command": "node",
+    "description": "Node.js runtime",
+    "category": "discovered"
+  },
+  {
+    "name": "npm",
+    "command": "npm",
+    "description": "Node package manager",
+    "category": "discovered"
+  },
+  {
+    "name": "wget",
+    "command": "wget",
+    "description": "File downloader",
+    "category": "discovered"
+  },
+  {
+    "name": "mongosh",
+    "command": "mongosh",
+    "description": "MongoDB shell",
+    "category": "discovered"
+  },
+  {
+    "name": "htop",
+    "command": "htop",
+    "description": "Process viewer",
+    "category": "discovered"
+  },
+  {
+    "name": "vim",
+    "command": "vim",
+    "description": "Text editor",
+    "category": "discovered"
+  },
+  {
+    "name": "zip",
+    "command": "zip",
+    "description": "Compression utility",
+    "category": "discovered"
+  },
+  {
+    "name": "tar",
+    "command": "tar",
+    "description": "Archive utility",
+    "category": "discovered"
+  },
+  {
+    "name": "ssh",
+    "command": "ssh",
+    "description": "SSH client",
+    "category": "discovered"
+  },
+  {
+    "name": "scp",
+    "command": "scp",
+    "description": "Secure copy",
+    "category": "discovered"
+  },
+  {
+    "name": "rsync",
+    "command": "rsync",
+    "description": "File sync utility",
+    "category": "discovered"
+  }
+]

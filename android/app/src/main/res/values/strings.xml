@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnowDrift</string>
+    <string name="accessibility_description">SnowDrift needs accessibility access to control your phone, read screens, tap buttons, and automate tasks on your behalf.</string>
+    <string name="enable_accessibility">Enable Accessibility Service</string>
+    <string name="service_running">SnowDrift is running</string>
+    <string name="send_message">Send</string>
+    <string name="message_hint">Ask SnowDrift anything...</string>
+</resources>

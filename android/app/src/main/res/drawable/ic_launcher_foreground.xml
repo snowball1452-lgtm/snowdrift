@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- SnowDrift — simple "M" lettermark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,80 L20,28 L40,28 L54,58 L68,28 L88,28 L88,80 L74,80 L74,52 L60,80 L48,80 L34,52 L34,80 Z"/>
+</vector>

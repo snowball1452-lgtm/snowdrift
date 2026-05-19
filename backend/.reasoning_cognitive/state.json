@@ -1,0 +1,8 @@
+{
+  "load_level": "high",
+  "verbosity": "concise",
+  "messages_last_5min": 6,
+  "avg_message_length": 3.3,
+  "last_updated": "2026-05-03T08:38:29.652436+00:00",
+  "notes": "Signal: explicit"
+}
