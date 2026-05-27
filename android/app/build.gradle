@@ -30,7 +30,10 @@ android {
         }
 
         python {
-            buildPython "C:/Users/snowb/AppData/Local/Programs/Python/Python310/python.exe"
+            // Chaquopy needs a Python 3.10 interpreter on the build host.
+            // Set via local.properties: buildPython=/path/to/python3.10
+            // Falls back to "python3" (macOS/Linux) or "python" (Windows) if not set.
+            buildPython project.findProperty("buildPython") ?: "python3"
             version "3.10"
             pip {
                 // 0.111.0 added fastapi-cli → orjson (Rust wheel, no ARM64 build)
