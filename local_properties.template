@@ -1,12 +1,20 @@
 # local.properties.template
 # Copy this to local.properties and fill in your values.
 # NEVER commit local.properties — it contains signing credentials.
-#
-# Android SDK path (set by Android Studio automatically):
+
+# Android SDK path (Android Studio fills this automatically):
 sdk.dir=/Users/YOUR_USER/Library/Android/sdk
+# Windows example:
+# sdk.dir=C\:\\Users\\YOUR_USER\\AppData\\Local\\Android\\Sdk
+
+# Chaquopy Python build interpreter (must be Python 3.10):
+# macOS/Linux:
+buildPython=python3
+# Windows:
+# buildPython=C\:/Users/YOUR_USER/AppData/Local/Programs/Python/Python310/python.exe
 
 # Keystore signing config for release builds:
-MYAPP_UPLOAD_STORE_FILE=snowballclaw.keystore
-MYAPP_UPLOAD_STORE_PASSWORD=YOUR_KEYSTORE_PASSWORD
-MYAPP_UPLOAD_KEY_ALIAS=snowballclaw
-MYAPP_UPLOAD_KEY_PASSWORD=YOUR_KEY_PASSWORD
+STORE_FILE=../snowdrift.keystore
+STORE_PASSWORD=YOUR_STORE_PASSWORD
+KEY_ALIAS=snowdrift
+KEY_PASSWORD=YOUR_KEY_PASSWORD
